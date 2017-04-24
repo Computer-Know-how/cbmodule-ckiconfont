@@ -44,7 +44,7 @@ component{
 		settingService.flushSettingsCache();
 
 		getInstance("MessageBox@cbMessageBox").info("Settings saved & updated!");
-		cb.setNextModuleEvent("CKIconFont","home.settings");
+		cb.setNextModuleEvent("cbmodule-ckiconfont","home.settings");
 	}
 
 }

@@ -21,7 +21,7 @@ component {
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
 	this.layoutParentLookup = true;
 	// Module Entry Point
-	this.entryPoint			= "ckiconfont";
+	this.entryPoint			= "cbmodule-ckiconfont";
 
 	function configure(){
 		// Settings

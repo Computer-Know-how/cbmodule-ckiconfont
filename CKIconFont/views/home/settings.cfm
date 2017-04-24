@@ -12,7 +12,7 @@
 				<div class="panel-body">
 					#getInstance("MessageBox@cbmessagebox").renderit()#
 
-					#html.startForm(action="#cb.buildModuleLink('CKIconFont','home.saveSettings')#",name="settingsForm")#
+					#html.startForm(action="#cb.buildModuleLink('cbmodule-ckiconfont','home.saveSettings')#",name="settingsForm")#
 					#html.startFieldset(legend="<i class='fa fa-magic'></i> Integration")#
 
 					<div class="form-group">
@@ -47,7 +47,7 @@
 				<div class="panel-body">
 					<a href="http://www.CompKnowHow.com" target="_blank" title="Your ColdBox and ContentBox specialists.">
 						<div class="center">
-							<img src="#event.getModuleRoot('CKIconFont')#/includes/images/logo.png" alt="Computer Know How" border="0" />
+							<img src="#event.getModuleRoot('cbmodule-ckiconfont')#/includes/images/logo.png" alt="Computer Know How" border="0" />
 						</div>
 					</a>
 					<p>

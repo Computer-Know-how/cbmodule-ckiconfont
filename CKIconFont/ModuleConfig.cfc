@@ -92,7 +92,7 @@ component {
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 
 		// Add a 'CK IconFont' contribution to the modules menu
-		menuService.addSubMenu(topMenu=menuService.MODULES,name="CKIconFont",label="CK IconFont",href="#menuService.buildModuleLink('CKIconFont','home.settings')#");
+		menuService.addSubMenu(topMenu=menuService.MODULES,name="CKIconFont",label="CK IconFont",href="#menuService.buildModuleLink('cbmodule-ckiconfont','home.settings')#");
 	}
 
 	/**
@@ -116,7 +116,7 @@ component {
 		// Install the ckeditor plugin
 		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/modules/contentbox-ckeditor/includes/ckeditor/plugins/iconfont";
 		var fileUtils = controller.getWireBox().getInstance("fileUtils@ckiconfont");
-		var pluginPath = controller.getSetting("modules")["CKIconFont"].path & "/includes/iconfont";
+		var pluginPath = controller.getSetting("modules")["cbmodule-ckiconfont"].path & "/includes/iconfont";
 		fileUtils.directoryCopy(source=pluginPath, destination=ckeditorPluginsPath);
 	}
 

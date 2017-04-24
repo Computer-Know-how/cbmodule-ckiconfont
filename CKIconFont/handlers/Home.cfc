@@ -43,7 +43,7 @@ component{
 		// Flush the settings cache so our new settings are reflected
 		settingService.flushSettingsCache();
 
-		getPlugin("MessageBox").info("Settings saved & updated!");
+		getInstance("MessageBox@cbMessageBox").info("Settings saved & updated!");
 		cb.setNextModuleEvent("CKIconFont","home.settings");
 	}
 

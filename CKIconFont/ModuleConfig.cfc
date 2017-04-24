@@ -15,7 +15,7 @@ component {
 	this.author 			= "Computer Know How, LLC";
 	this.webURL 			= "http://www.compknowhow.com";
 	this.description 		= "Adds icon font support to CKEditor 4 in ContentBox";
-	this.version			= "1.0";
+	this.version			= "1.1";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
@@ -27,7 +27,7 @@ component {
 		// Settings
 		settings = {
 			version = "1",
-			stylesheet = "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css",
+			stylesheet = "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
 			label = 'fa'
 		};
 
@@ -81,7 +81,7 @@ component {
 
 		// Add the settings to the CKEditor extra config
 		arguments.interceptData.extraConfig &= "iconfont_stylesheet : '" & settings.stylesheet & "'";
-		arguments.interceptData.extraConfig &= ", iconfont_label : '" & settings.label & "', ";
+		arguments.interceptData.extraConfig &= ", iconfont_label : '" & settings.label & "'";
 		arguments.interceptData.extraConfig &= ", contentsCss : '" & settings.stylesheet &"'";
 	}
 
@@ -114,7 +114,7 @@ component {
 		settingService.flushSettingsCache();
 
 		// Install the ckeditor plugin
-		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/includes/ckeditor/plugins/iconfont";
+		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/modules/contentbox-ckeditor/includes/ckeditor/plugins/iconfont";
 		var fileUtils = controller.getWireBox().getInstance("fileUtils@ckiconfont");
 		var pluginPath = controller.getSetting("modules")["CKIconFont"].path & "/includes/iconfont";
 		fileUtils.directoryCopy(source=pluginPath, destination=ckeditorPluginsPath);
@@ -147,7 +147,7 @@ component {
 		settingService.flushSettingsCache();
 
 		// Uninstall the ckeditor plugin
-		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/includes/ckeditor/plugins/iconfont";
+		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/modules/contentbox-ckeditor/includes/ckeditor/plugins/iconfont";
 		var fileUtils = controller.getWireBox().getInstance("fileUtils@ckiconfont");
 		fileUtils.directoryRemove(path=ckeditorPluginsPath, recurse=true);
 	}

@@ -3,7 +3,7 @@ CK Icon Font Module
 
 Author
 -----------------
-Computer Know How/Seth Engen
+Computer Know How, LLC/Seth Engen
 
 Description
 -----------------

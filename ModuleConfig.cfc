@@ -1,6 +1,6 @@
 /**
 ********************************************************************************
-Copyright 2014 Computer Know How, www.compknowhow.com
+Copyright 2017 Computer Know How, LLC, www.compknowhow.com
 ********************************************************************************
 
 Author: Seth Engen
@@ -21,7 +21,7 @@ component {
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa
 	this.layoutParentLookup = true;
 	// Module Entry Point
-	this.entryPoint			= "cbmodule-ckiconfont";
+	this.entryPoint			= "ckiconfont";
 
 	function configure(){
 		// Settings
@@ -91,8 +91,8 @@ component {
 	function onLoad(){
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 
-		// Add a 'CK IconFont' contribution to the modules menu
-		menuService.addSubMenu(topMenu=menuService.MODULES,name="CKIconFont",label="CK IconFont",href="#menuService.buildModuleLink('cbmodule-ckiconfont','home.settings')#");
+		// Add a 'CK Icon Fonts' contribution to the modules menu
+		menuService.addSubMenu(topMenu=menuService.MODULES,name="CKIconFont",label="CK Icon Fonts",href="#menuService.buildModuleLink('ckiconfont','home.settings')#");
 	}
 
 	/**
@@ -116,7 +116,7 @@ component {
 		// Install the ckeditor plugin
 		var ckeditorPluginsPath = controller.getSetting("modules")["contentbox-admin"].path & "/modules/contentbox-ckeditor/includes/ckeditor/plugins/iconfont";
 		var fileUtils = controller.getWireBox().getInstance("fileUtils@ckiconfont");
-		var pluginPath = controller.getSetting("modules")["cbmodule-ckiconfont"].path & "/includes/iconfont";
+		var pluginPath = controller.getSetting("modules")["ckiconfont"].path & "/includes/iconfont";
 		fileUtils.directoryCopy(source=pluginPath, destination=ckeditorPluginsPath);
 	}
 
@@ -126,7 +126,7 @@ component {
 	function onUnload(){
 		var menuService = controller.getWireBox().getInstance("AdminMenuService@cb");
 
-		// Remove the 'CK IconFont' contribution from the modules menu
+		// Remove the 'CK Icon Fonts' contribution from the modules menu
 		menuService.removeSubMenu(topMenu=menuService.MODULES,name="CKIconFont");
 	}
 

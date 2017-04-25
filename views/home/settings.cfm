@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h1 class="h1">
-				<i class="fa fa-fa"></i> CK IconFonts
+				<i class="fa fa-fa"></i> CK Icon Fonts
 			</h1>
 		</div>
 	</div>
@@ -12,7 +12,7 @@
 				<div class="panel-body">
 					#getInstance("MessageBox@cbmessagebox").renderit()#
 
-					#html.startForm(action="#cb.buildModuleLink('cbmodule-ckiconfont','home.saveSettings')#",name="settingsForm")#
+					#html.startForm(action="#cb.buildModuleLink('ckiconfont','home.saveSettings')#",name="settingsForm")#
 					#html.startFieldset(legend="<i class='fa fa-magic'></i> Integration")#
 
 					<div class="form-group">
@@ -47,11 +47,11 @@
 				<div class="panel-body">
 					<a href="http://www.CompKnowHow.com" target="_blank" title="Your ColdBox and ContentBox specialists.">
 						<div class="center">
-							<img src="#event.getModuleRoot('cbmodule-ckiconfont')#/includes/images/logo.png" alt="Computer Know How" border="0" />
+							<img src="#event.getModuleRoot('ckiconfont')#/includes/images/logo.png" alt="Computer Know How, LLC" border="0" />
 						</div>
 					</a>
 					<p>
-						<strong>Computer Know How</strong>
+						<strong>Computer Know How, LLC</strong>
 						has a team of talented ColdFusion developers that can be your specialists when it comes to anything ColdBox and ContentBox.
 						<a href="mailto:info@compknowhow.com">Contact us</a>, we are here to help!
 					</p>

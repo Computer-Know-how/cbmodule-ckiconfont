@@ -5,7 +5,7 @@ component{
 	property name="cb" 				inject="cbHelper@cb";
 
 	function settings(event,rc,prc){
-		// Activate the module tab and 'CK IconFont' menu contribution
+		// Activate the module tab and 'CK Icon Fonts' menu contribution
 		prc.tabModules = true;
 		prc.tabModules_CKIconFont = true;
 
@@ -44,7 +44,7 @@ component{
 		settingService.flushSettingsCache();
 
 		getInstance("MessageBox@cbMessageBox").info("Settings saved & updated!");
-		cb.setNextModuleEvent("cbmodule-ckiconfont","home.settings");
+		cb.setNextModuleEvent("ckiconfont","home.settings");
 	}
 
 }

@@ -82,7 +82,19 @@ component {
 		// Add the settings to the CKEditor extra config
 		arguments.interceptData.extraConfig &= "iconfont_stylesheet : '" & settings.stylesheet & "'";
 		arguments.interceptData.extraConfig &= ", iconfont_label : '" & settings.label & "'";
-		arguments.interceptData.extraConfig &= ", contentsCss : '" & settings.stylesheet &"'";
+	}
+
+	/**
+	* CKEditor Contents CSS
+	*/
+	function cbadmin_ckeditorContentsCss(event, interceptData){
+		var settingService = controller.getWireBox().getInstance("SettingService@cb");
+
+		// Get the IconFont settings
+		var args = {name="cbox-ckiconfont"};
+		var settings = deserializeJSON( settingService.findWhere(criteria=args).getValue() );
+
+		arrayAppend(arguments.interceptData.contentsCss, settings.stylesheet);
 	}
 
 	/**
